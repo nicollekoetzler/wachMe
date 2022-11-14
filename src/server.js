@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { json } from 'express';
 import dotenv from "dotenv";
 import mediaRouter from './routes/mediaRouter.js';
 
@@ -6,6 +6,7 @@ dotenv.config();
 
 const server = express();
 
+server.use(json());
 server.use(mediaRouter);
 
 server.listen(process.env.PORT, () => {

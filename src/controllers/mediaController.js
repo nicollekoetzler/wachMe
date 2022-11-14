@@ -19,7 +19,7 @@ export async function getMedias(req, res) {
 
 export async function addMedias(req, res) {
     const media = req.body;
-    console.log(media)
+    console.log(req.body)
 
     // const mediaSchema = {name, description, pictureUrl}
     
